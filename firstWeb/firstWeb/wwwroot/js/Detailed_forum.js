@@ -51,7 +51,6 @@
                 data: JSON.stringify({ forum_id: forum_id, content: editor_Content }),
                 success: function (res) {
                     if (res.code == "200") {
-                        alert("添加成功");
                         window.location.reload();
                     } else {
                         alert(res.message);

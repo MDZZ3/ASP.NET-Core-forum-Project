@@ -29,20 +29,21 @@ namespace firstWeb.Domain.Even
         {
             var forum = _forumrepository.Table.FirstOrDefault(f => f.ID == value.forumID);
             var comment = _commentRepository.Table.FirstOrDefault(c => c.ID == value.Comment_Id);
-            Notice notice = new Notice()
+            if (value.publisherId != value.SubscriberId)
             {
-                category = value.category,
-                forum_title = forum.Title,
-                Time = DateTime.Now,
-                PublisherID = value.publisherId,
-                SubscriberID = value.SubscriberId,
-                forum_link = $"/forum/{value.forumID}?p={comment.LocationPage}#comment_list",
-                state = 0
-            };
-
-            _noticeRepository._db.Add(notice);
-            _noticeRepository._db.SaveChanges();
-
+                Notice notice = new Notice()
+                {
+                    category = value.category,
+                    forum_title = forum.Title,
+                    Time = DateTime.Now,
+                    PublisherID = value.publisherId,
+                    SubscriberID = value.SubscriberId,
+                    forum_link = $"/forum/{value.forumID}?p={comment.LocationPage}#comment_list",
+                    state = 0
+                };
+                _noticeRepository._db.Add(notice);
+                _noticeRepository._db.SaveChanges();
+            }
         }
     }
 }

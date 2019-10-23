@@ -31,11 +31,10 @@ window.onload = function () {
             contentType: "application/json",
             data: JSON.stringify({ forum_Title: Title, forum_Content: Content, forum_Category: selectValue }),
             success: function (res) {
-                alert(res.message);
                 window.location.href = "/home/index";
             },
             error: function (res) {
-                alert(res.Message);
+                alert("出现错误，请刷新页面");
             }
         }); 
 

@@ -32,21 +32,22 @@ namespace firstWeb.Domain.Even
 
             var comment = _commentRepository.Table.Select(f => new { comment_id = f.ID, user_id = f.UserID,locationpage=f.LocationPage }).FirstOrDefault(c => c.comment_id == value.commentId);
 
-            Notice notice = new Notice()
+            if (value.publisherId != value.SubscriberId)
             {
-                PublisherID = value.publisherId,
-                SubscriberID = comment.user_id,
-                Time = DateTime.Now,
-                category = value.category,
-                forum_title = forum.forum_title,
-                forum_link = $"/forum/{forum.id}?p={comment.locationpage}#comment_list",
-                state = 0,
-            };
+                Notice notice = new Notice()
+                {
+                    PublisherID = value.publisherId,
+                    SubscriberID = value.SubscriberId,
+                    Time = DateTime.Now,
+                    category = value.category,
+                    forum_title = forum.forum_title,
+                    forum_link = $"/forum/{forum.id}?p={comment.locationpage}#comment_list",
+                    state = 0,
+                };
+                _noticeRepository.Table.Add(notice);
 
-            _noticeRepository.Table.Add(notice);
-
-            _noticeRepository._db.SaveChanges();
-
+                _noticeRepository._db.SaveChanges();
+            }
         }
     }
 }

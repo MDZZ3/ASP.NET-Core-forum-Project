@@ -93,7 +93,7 @@ namespace firstWeb.Controllers
             Comment comment = new Comment();
             comment.forumID = forum_id;
             comment.Content = Content;
-            comment.ID = Guid.NewGuid().ToString();
+            comment.ID = Guid.NewGuid().ToString("N");
             comment.UserID = user_id;
             comment.Create_Time = DateTime.Now;
             comment.LocationPage = Locationpage;
@@ -169,7 +169,7 @@ namespace firstWeb.Controllers
             }
 
           
-            string Create_replyid = Guid.NewGuid().ToString();
+            string Create_replyid = Guid.NewGuid().ToString("N");
 
             
             DateTime Create_Time = DateTime.Now;
@@ -192,7 +192,7 @@ namespace firstWeb.Controllers
             {
                await _commentService.AddReplyAsync(reply);
                //发布AddReply事件，使评论的ReplyCount+1
-               _container.Publish("AddReply", new ReplySumbitEven() {category=2,publisherId=user_id,forumID=replyViewModel.Original_Forum_ID,commentId = replyViewModel.Original_Evaluate_ID });
+               _container.Publish("AddReply", new ReplySumbitEven() {category=2,SubscriberId= replyViewModel.super_Evaluate_ID, publisherId=user_id,forumID=replyViewModel.Original_Forum_ID,commentId = replyViewModel.Original_Evaluate_ID });
 
             }
             catch(Exception ex)

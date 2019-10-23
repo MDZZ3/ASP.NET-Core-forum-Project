@@ -66,6 +66,7 @@ namespace firstWeb.Controllers
         
         
         [HttpGet]
+        [Route("/forum/Create_forum")]
         [Authorize]
         public IActionResult Create_forum()
         {
@@ -84,14 +85,14 @@ namespace firstWeb.Controllers
         public async Task<IActionResult> Create_forum([FromBody] forumViewModel forumViewmodel)
         {
             int titleLength =int.Parse(_configuration.GetSection("Forum_limit:Title_Length").Value);
-            int MaxCagegory =int.Parse(_configuration.GetSection("Forum_limit:MaxCategoryID").Value);
+            Dictionary<string, string> forumCategories = _configuration.GetSection("Forum_Category:data").Get<Dictionary<string, string>>();
             if (string.IsNullOrEmpty(forumViewmodel.forum_Title)||forumViewmodel.forum_Title.Length >= titleLength|| forumViewmodel.forum_Title.Length <= 0)
             {
                 //使用方法尚未理清，可以修改
                 return StatusCode(400, new { Code = "400", Message = "题目不合格" });
             }
 
-            if (forumViewmodel.forum_Category == 0 || forumViewmodel.forum_Category > MaxCagegory)
+            if (forumViewmodel.forum_Category == 0 ||!forumCategories.ContainsKey(forumViewmodel.forum_Category.ToString()))
             {
                 //使用方法尚未理清，可以修改
                 return StatusCode(400, new { Code = "400", Message = "帖子分类不符合" });
@@ -166,6 +167,7 @@ namespace firstWeb.Controllers
             forum.Create_Time = DateTime.Now;
             forum.UserId = id;
             forum.IsElite = 0;
+            forum.ID = Guid.NewGuid().ToString("N");
             return forum;                       
         }
 
@@ -190,7 +192,7 @@ namespace firstWeb.Controllers
         }
 
         [HttpGet]
-        [Route("Forum/{id:int}")]
+        [Route("Forum/{id}")]
         public async Task<IActionResult> GetForum(string id,string p = "1")
         {
             if (string.IsNullOrEmpty(id))
@@ -277,7 +279,7 @@ namespace firstWeb.Controllers
                     //获取文件扩展名
                     string ExtensionName = FileHelper.GetExtensionName(file.FileName);
                     //定义保存路径
-                    string GuidName = Guid.NewGuid().ToString();
+                    string GuidName = Guid.NewGuid().ToString("N");
                     string path = $@"\upload\{phone}\{ GuidName}.{ExtensionName}";
                     string Savepath =$@"{_environment.WebRootPath}\{path}";
                     //将文件写入服务器
