@@ -65,7 +65,7 @@
                 <div class="Userinfo_Div_Btn">
                     @if (Model.isConcern != 2)
                     {
-                       <a class="btn btn-info" >主页</a>
+                       <a href="/Account/homepage-@Model.forum.UserId" class="btn btn-info" >主页</a>
                            @if (Model.isConcern==1)
                            {
                               <a class="btn btn-primary unconternBtn attention">已关注</a>

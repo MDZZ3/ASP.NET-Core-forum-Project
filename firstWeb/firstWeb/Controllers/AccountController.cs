@@ -141,6 +141,8 @@ namespace firstWeb.Controllers
             try
             {
                 await _contern.RemoveConternAsync(auth_ID, user_id);
+
+                _container.Publish("RemoveConcern", new RemoveConcernSubmitEven() { publisherId = user_id, SubscriberId = auth_ID });
             }catch(Exception ex)
             {
                 _logger.LogError(ex.StackTrace);

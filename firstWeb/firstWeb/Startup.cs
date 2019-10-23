@@ -96,13 +96,22 @@ namespace firstWeb
             services.AddScoped<Comment_NoticeHandler>();
             services.AddScoped<Reply_NoticeHandler>();
             services.AddScoped<Concern_NoticeHandler>();
-
+            services.AddScoped<AddConcernCountHandler>();
+            services.AddScoped<RemoveConcernHandler>();
+            
+            //回复事件
             EvenHandlerContainer.Subscribe<ReplySumbitEven, AddReplyCountHandler>("AddReply");
             EvenHandlerContainer.Subscribe<ReplySumbitEven, Reply_NoticeHandler>("AddReply");
+            //评价事件
             EvenHandlerContainer.Subscribe<CommentSubmitEven, AddCommentCountHandler>("AddComment");
             EvenHandlerContainer.Subscribe<CommentSubmitEven, Comment_NoticeHandler>("AddComment");
+            //创造帖子事件
             EvenHandlerContainer.Subscribe<CreateForumSumbitEven, AddForumCountHandler>("CreateForum");
+            //添加关注
+            EvenHandlerContainer.Subscribe<ConcernSumbitEven, AddConcernCountHandler>("CreateConcern");
             EvenHandlerContainer.Subscribe<ConcernSumbitEven, Concern_NoticeHandler>("CreateConcern");
+            //取消关注
+            EvenHandlerContainer.Subscribe<RemoveConcernSubmitEven, RemoveConcernHandler>("RemoveConcern");
             
             
             
