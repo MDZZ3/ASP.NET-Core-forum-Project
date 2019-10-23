@@ -1,0 +1,89 @@
+﻿@using System.Security.Claims
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <link href="~/css/Header.css" rel="stylesheet" />
+    <link href="~/css/universally.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div id="Header">
+        <a href="/Home/Index" class="logo"></a>
+        <div id="Header_Content">
+
+        </div>
+        <div id="UserLogin_Register">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <ul class="user-info-menu right-links list-inline list-unstyled">
+
+                    <li class="dropdown user-profile">
+                        <a href="#" id="userinfo" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-user"></span>
+                            <span>
+                                @User.Identity.Name
+                                <span class="caret"></span>
+                            </span>
+                        </a>
+
+                        <ul class="dropdown-menu user-profile-menu list-unstyled">
+                            <li>
+                                <a href="/Account/homepage-@User.Claims.FirstOrDefault(f=>f.Type==ClaimTypes.PrimarySid).Value">
+                                    <i class="fa-info"></i>
+                                    个人信息
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/UserInfo/UserInfo_Container?active=1102">
+                                    <i class="fa-info"></i>
+                                    我的帖子
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/UserInfo/UserInfo_Container?active=1103">
+                                    <i class="fa-info"></i>
+                                    我的评论
+                                </a>
+                            </li>
+                            <li class="last">
+                                <a asp-action="Logout" asp-controller="Account">
+                                    <i class="fa-lock"></i>
+                                    登出
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li role="presentation" class="user_info">
+                        <a href="/Notification/Container?active=1201" class="glyphicon glyphicon-bell">
+                            <i class="info_Count">
+                            </i>
+                        </a>
+                    </li>
+                </ul>
+            }
+            else
+            {
+
+                <a id="LoginBtn">登录(或注册)</a>
+
+            }
+
+        </div>
+
+    </div>
+    <script src="~/js/Head.js"></script>
+    @RenderBody()
+    <div class="footer">
+
+    </div>
+
+</body>
+
+</html>

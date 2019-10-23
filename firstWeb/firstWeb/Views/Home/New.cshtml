@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "New";
+}
+@model firstWeb.Models.bean.Userinfo
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+<div>
+
+    @foreach (var claim in User.Claims)
+    {
+        <p>Claim</p>
+        <p>ClaimType:@claim.Type</p>
+        <p>ClaimValue:@claim.Value</p>
+
+    }
+    <h1>用户信息</h1>
+    <p>@Model.NickName</p>
+    <p>@Model.Last_Login_Time</p>
+    <p>@Model.Login_Time</p>
+</div>

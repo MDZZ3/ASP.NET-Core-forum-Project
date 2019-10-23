@@ -1,0 +1,27 @@
+﻿.theme {
+    border: 1px solid #e6e6e6;
+    background: #fff;
+    margin: 60px auto;
+    width: 800px;
+}
+
+.theme_Content {
+    margin: 20px 30px;
+    width: 715px;
+}
+#forum_Title, #categoryItem, #editor{
+    margin-left: 15px;
+}
+#Verification_Title span{
+    margin-left:8px;
+    color:red
+}
+#btnItem {
+    padding-left: 15px;
+}
+#Create{
+    margin-left:22px;
+}
+
+
+

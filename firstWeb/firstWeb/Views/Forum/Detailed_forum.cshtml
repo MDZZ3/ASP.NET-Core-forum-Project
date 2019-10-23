@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewData["Title"] = "Detailed_forum";
+}
+@model firstWeb.Domain.ViewModel.DetailedforumViewModel
+<link href="~/css/Detailed_forum.css" rel="stylesheet" />
+<link href="~/css/universally.css" rel="stylesheet" />
+<script src="~/lib/wangEditor-3.1.1/wangEditor-3.1.1/release/wangEditor.min.js"></script>
+<script src="~/js/xlPaging.js"></script>
+<script src="~/js/Detailed_forum.js"></script>
+<script src="~/js/Forum_function.js"></script>
+
+<div class="theme" id="@Model.forum.ID">
+    <div class="theme_Title">
+        <h3>@Model.forum.Title</h3>
+        <div class="row head_info ">
+            <div class="col-md-6">
+                <span>&nbsp;&nbsp;发表在</span>
+                <a href="#">官方新闻</a>
+                <span>&nbsp;@Model.forum.Create_Time.ToShortDateString()</span>
+            </div>
+            <div class="col-md-6">
+                <span class="pull-right"><span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;@Model.forum.Reading_volume&nbsp;&nbsp;&nbsp;</span>
+            </div>
+        </div>
+    </div>
+    <div class="theme_Content">
+        @Html.Raw(Model.forum.Content)
+    </div>
+   
+    @if (Context.User.Identity.IsAuthenticated)
+    {   <br />
+        <br />
+        <hr />
+        <div class="Comment_Div">
+            <div id="editor" style="">
+
+            </div>
+            <div class="commentBtn_Div">
+                <button class="btn btn-default commentBtn">评论</button>
+            </div>
+        </div>
+    }
+
+    <div class="theme_footer pull-right clearfix">
+        <a href="javascript:;"><span>举报&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
+        <span>评论(@Model.forum.EvaluateCount)</span>
+    </div>
+
+    <div class="User_Card">
+        <div id="auth_basic_info">
+            <div id="auth_Head">
+                <img src="~/@Model.forum.User.HeadAddress" height="80" width="100" class="auth_Head_img" />
+            </div>
+            <div class="Userinfo_Div" auth_ID="@Model.forum.UserId">
+                <div class="Userinfo_Nickname">
+                    <span>@Model.forum.User.Nickname</span>
+                </div>
+
+                <div class="Userinfo_Otherinfo">
+                    <span>发帖数:@Model.forum.User.Forum_Count</span>
+                    <span>关注:@Model.forum.User.Concern</span>
+                    <span>被关注:@Model.forum.User.Fans</span>
+                </div>
+                <div class="Userinfo_Div_Btn">
+                    @if (Model.isConcern != 2)
+                    {
+                       <a class="btn btn-info" >主页</a>
+                           @if (Model.isConcern==1)
+                           {
+                              <a class="btn btn-primary unconternBtn attention">已关注</a>
+                           }
+                           else
+                           {
+                              <a class="btn btn-primary conternBtn ">关注</a>
+                           }    
+                      
+                    }
+                             
+                </div>          
+            </div>
+
+        </div>
+    </div>
+</div>
+@await Component.InvokeAsync("Comment", new { forum_id= Model.forum.ID,p=ViewData["currentPage"] })
+
+

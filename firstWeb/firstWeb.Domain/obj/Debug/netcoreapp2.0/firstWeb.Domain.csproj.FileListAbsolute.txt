@@ -1,0 +1,12 @@
+C:\Users\MDZZ\source\repos\forum_Demo\firstWeb\firstWeb.Domain\bin\Debug\netcoreapp2.0\firstWeb.Domain.deps.json
+C:\Users\MDZZ\source\repos\forum_Demo\firstWeb\firstWeb.Domain\bin\Debug\netcoreapp2.0\firstWeb.Domain.dll
+C:\Users\MDZZ\source\repos\forum_Demo\firstWeb\firstWeb.Domain\obj\Debug\netcoreapp2.0\firstWeb.Domain.csprojResolveAssemblyReference.cache
+C:\Users\MDZZ\source\repos\forum_Demo\firstWeb\firstWeb.Domain\obj\Debug\netcoreapp2.0\firstWeb.Domain.csproj.CoreCompileInputs.cache
+C:\Users\MDZZ\source\repos\forum_Demo\firstWeb\firstWeb.Domain\obj\Debug\netcoreapp2.0\firstWeb.Domain.AssemblyInfoInputs.cache
+C:\Users\MDZZ\source\repos\forum_Demo\firstWeb\firstWeb.Domain\obj\Debug\netcoreapp2.0\firstWeb.Domain.AssemblyInfo.cs
+C:\Users\MDZZ\source\repos\forum_Demo\firstWeb\firstWeb.Domain\bin\Debug\netcoreapp2.0\firstWeb.Domain.pdb
+C:\Users\MDZZ\source\repos\forum_Demo\firstWeb\firstWeb.Domain\obj\Debug\netcoreapp2.0\firstWeb.Domain.dll
+C:\Users\MDZZ\source\repos\forum_Demo\firstWeb\firstWeb.Domain\obj\Debug\netcoreapp2.0\firstWeb.Domain.pdb
+C:\Users\MDZZ\source\repos\forum_Demo\firstWeb\firstWeb.Domain\bin\Debug\netcoreapp2.0\firstWeb.Core.dll
+C:\Users\MDZZ\source\repos\forum_Demo\firstWeb\firstWeb.Domain\bin\Debug\netcoreapp2.0\firstWeb.Core.pdb
+C:\Users\MDZZ\source\repos\forum_Demo\firstWeb\firstWeb.Domain\obj\Debug\netcoreapp2.0\firstWeb.Domain.csproj.CopyComplete

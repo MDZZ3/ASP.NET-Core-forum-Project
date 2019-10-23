@@ -1,0 +1,82 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>登录</title>
+    <script src="~/js/Login.js"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link href="~/css/Login.css" rel="stylesheet" />
+</head>
+<body>
+    <img src="~/images/logo.png" />
+
+    <div id="managers" class="clearfix ">
+        <h3 class="text-center">秘密贴吧</h3>
+        <div id="tab">
+            <ul class="nav nav-tabs nav-justified">
+                <li class="tab active"><a href="#">登录</a></li>
+                <li class="tab"><a href="#">注册</a></li>
+            </ul>
+        </div>
+
+        <div id="managers_Login">
+            <form class="text-center">
+                <div class="username_Text">
+                    <input type="text" class="text-center form-control" maxlength="15" autocomplete="off" name="username" placeholder="请输入电话" value="@ViewBag.username" />
+                </div>
+
+                <div class="password_Text">
+                    <input class="text-center form-control" type="password" name="password" value="@ViewBag.password" placeholder="请输入密码" />
+                </div>
+
+                @*<div class="login_Status text-left">
+                    <span>记住我一周：</span><input type="checkbox" name="LoginStatus" />
+                </div>*@
+                <input type="hidden" id="returnUrl" value="@ViewData["ReturnUrl"]" />
+
+                <div class="login_div_btn">
+                    <button type="button" id="btnLogin" class="btn login_btn">登录</button>
+                </div>
+
+            </form>
+        </div>
+        <!--注册页面-->
+        <div id="managers_register" class="clearfix ">
+            <form class="text-center">
+                <div class="username_Text">
+                    <input type="text" class="text-center form-control" maxlength="15" autocomplete="off" name="username" placeholder="请输入电话" value="@ViewBag.username" />
+                </div>
+
+                <div class="password_Text">
+                    <input class="text-center form-control" type="password" name="password" value="@ViewBag.password" placeholder="请输入密码" />
+                </div>
+
+                <div class="Code_Text col-md-6">
+                    <input class="text-center form-control" type="text" autocomplete="off" name="code" placeholder="输入电话验证码" />
+                </div>
+
+                <div class="Code_div_Btn col-md-6">
+                    <input type="button" id="CodeBtn" class="btn Code_Btn" value="验证码发送" />
+                </div>
+
+                <div class="Register_div_btn">
+                    <button type="button" id="btnRegister" class="btn register_btn">注册</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+</body>
+
+</html>

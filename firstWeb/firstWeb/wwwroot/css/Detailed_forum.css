@@ -1,0 +1,161 @@
+﻿*{
+    margin:0;
+    padding:0;
+}
+.theme,.forum_comment {
+    border: 1px solid #e6e6e6;
+    background: #fff;
+    padding: 20px 30px;
+    margin:20px auto;
+    width:907px;
+    position:relative;
+}
+/*.theme_Title {
+    margin: 20px 30px;
+}*/
+.head_info {
+    margin-top:25px;
+    color: #8c8c8c;
+    border-bottom: 1px solid #e6e6e6;
+}
+.theme_footer, .comment_list_footer{
+    color: #8c8c8c;
+}
+.theme_Content {
+    margin-top: 35px;
+}
+#comment_list,.reply_list {
+    list-style: none;
+}
+#comment_list li{
+    margin-top:25px;
+    border-bottom:1px solid #e6e6e6;
+}
+
+/*消除评论(回复)最后一个的底框*/
+#comment_list .no-border{
+    border:none;
+}
+
+.comment_list_img, .reply_list_img {
+    float: left;
+}
+
+.comment_list_con,.reply_list_con {
+    width: 770px;
+    float: right;
+    margin-bottom: 20px;
+}
+.reply_list_con{
+    margin-bottom:10px;
+}
+
+.comment_list_footer {
+    margin-bottom: 10px;
+}
+
+.reply_list_footer{
+    margin-bottom:5px;
+}
+.comment_list_txt {
+    margin-top: 5px;
+}
+.User_Card {
+    background: #fff;
+    position: absolute;
+    width: 300px;
+    border: 1px solid #e6e6e6;
+    left: 920px;
+    top: 0px;
+    padding: 10px 10px;
+}
+.auth_Head_img {
+    display:block;
+    margin: 5px auto;
+}
+
+.reply_Contents {
+    padding:10px 10px;
+    background: #f7f8fa;
+    width:100%;
+    float:right;
+}
+.reply_text_div, .reply_text_div > .replyBtn, .reply_text_div >.remove_reply {
+    margin-top: 10px;
+}
+.remove_reply{
+    display:none;
+}
+.reply_text {
+    resize: none;
+}
+.reply_list_con > .reply_list_footer > a, .theme > .theme_footer > a, #comment_list > li >.comment_list_footer > a {
+    color: #8c8c8c;
+    text-decoration: none;
+}
+    .reply_list_con > .reply_list_footer > a:hover, .theme > .theme_footer > a :hover, #comment_list > li >.comment_list_footer>a:hover{
+        color: aqua;
+    }
+/*富文本高度*/
+.w-e-text-container {
+    height: 100px !important; /*!important是重点，因为原div是行内样式设置的高度300px*/
+}
+.commentBtn_Div {
+    margin-top: 20px;
+}
+.Userinfo_Div{
+    margin-top:20px;
+}
+.Userinfo_Div>.Userinfo_Nickname{
+   text-align:center;
+}
+
+.Userinfo_Otherinfo {
+    color:#8c8c8c;
+    border-left:1px solid #8c8c8c;
+}
+
+.Userinfo_Otherinfo>span{
+    display:block;
+    margin:6px 17px;
+}
+.Userinfo_Div_Btn{
+    margin-top:30px;
+}
+.Userinfo_Div_Btn>a{
+    width:110px;
+    margin:12px 12px;
+}
+.unconternBtn {
+    position: relative;   
+    top:-1px;
+    left:0;
+    right: 0;
+    bottom: 10px;
+    border:none;
+}
+
+.attention:hover:after {
+    position: absolute;
+    height: 35px;
+    width: 110px;
+    top: 0px;
+    left: 0px;
+    right: 0;
+    bottom: 0;
+    border-radius: 4px;
+    background-color: #5bc0de;
+    border-color: #5bc0de;
+    content: '取关';
+    color: white;
+    line-height: 32px;
+    font-size: 14px;
+}
+#page {
+    margin: 28px 132px;
+}
+#page>ul{
+   margin:0px 164px;
+}
+
+

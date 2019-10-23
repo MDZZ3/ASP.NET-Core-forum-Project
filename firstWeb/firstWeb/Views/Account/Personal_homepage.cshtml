@@ -1,0 +1,72 @@
+﻿@model firstWeb.Domain.Model.User
+<link href="~/css/Personal_homepage.css" rel="stylesheet" />
+<div class="homepage">
+    <div class="personal_cart">
+        <div class="personal_head">
+            <img width="120" height="120" src="/@Model.HeadAddress" class="img-rounded" />
+        </div>
+        <div class="personal_Nickname">
+            <span><strong>@Model.Nickname</strong></span>
+        </div>
+        <div class="personal_count clearfix">
+            <ul >
+                <li>@Model.Concern</li>
+                <li>关注人数</li>
+            </ul>
+            <ul>
+                <li>@Model.Fans</li>
+                <li>被关注人数</li>
+            </ul>
+            <ul>
+                <li>@Model.Forum_Count</li>
+                <li>帖子数量</li>
+            </ul>
+        </div>
+    </div>
+    <div class="personal_info">
+        <div class="personal_info_menu">
+            <div class="info">
+                <h4>个人资料</h4>
+            </div>
+
+            <ul class="nav nav-pills nav-stacked">
+                <li class="personal_data active"><a href="#">资料</a></li>
+                <li class="personal_forum"><a href="#">帖子</a></li>
+            </ul>
+        </div>
+        <div class="personal_info_container">
+            <div>
+                <h4>个人资料</h4>
+            </div>
+            <div id="personal_tid"><span>Tid:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>@Model.ID</span></div>
+            <div id="personal_Nickname"><span>昵称:</span>&nbsp;&nbsp;&nbsp;<span>@Model.Nickname</span></div>
+            <div>
+                <h4>活动概况</h4>
+            </div>
+            <ul>
+                <li>
+                    <span class="name">帖子 </span>
+                    <span class="number">@Model.Forum_Count</span>
+                </li>
+                <li>
+                    <span class="name">评价 </span>
+                    <span class="number">@Model.Comment_Count</span>
+                </li>
+                <li>
+                    <span class="name">回复 </span>
+                    <span class="number">@Model.Reply_Count</span>
+                </li>
+            </ul>
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="name">最后登录时间:</span>
+                    <span class="number">@Model.Last_Login_Time</span>
+                </div>
+                <div class="col-md-6">
+                    <span class="name">账号注册时间:</span>
+                    <span class="number">@Model.Register_Time</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

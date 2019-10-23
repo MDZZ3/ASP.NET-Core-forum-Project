@@ -1,0 +1,63 @@
+﻿
+@{
+    Layout = null;
+}
+@model List<firstWeb.Domain.ViewModel.NoticeViewModel>
+<!DOCTYPE html>
+
+<html>
+<body>
+    @if (Model.Count!=0)
+    {
+
+         <ul class="comment_notice_ul">
+        @*<li class="comment_notice_li">
+            <div class="comment_notice_1">
+                <span class="comment_notice_title"><a href="#"> August_Azure</a>评论了你</span>
+                <a class="notice_DelectBtn" href="#"><img width="18" height="18" src="~/images/delect.png" /></a>
+            </div>
+            <div class="comment_notice_2">
+                <a href="#"><strong>使用IdentityServer4简单的实现一个SSO登录</strong></a>
+                <span class="notice_time">2019-09-06</span>
+            </div>
+        </li>*@
+        @foreach(var notice in Model)
+        {
+             <li class="comment_notice_li">
+              <div class="comment_notice_1">
+                <span class="comment_notice_title"><a href="#"> @notice.Nickname</a>@if (notice.notice.category==1) { <span>评论了你的帖子</span>} else { <span>回复了你的评论</span>}</span>
+
+
+<a class="notice_DelectBtn" href="#"><img width="18" height="18" src="~/images/delect.png" /></a>
+              </div>
+              <div class="comment_notice_2">
+                <a href="@notice.notice.forum_link"><strong>@notice.notice.forum_title</strong></a>
+                <span class="notice_time">@notice.notice.Time.ToLongDateString()</span>
+              </div>
+            </li>
+
+        }
+    </ul>
+    <div id="page">
+
+    </div>
+    <script>
+        $("#page").paging({
+            nowPage:@ViewData["currentpage"],
+            pageNum:@ViewData["pageCount"],
+            callback: function (num, node) {
+                $.get("/Notification/comment_notice?page=" + num, function (data) {
+                    $(".Container_Content").html(data);
+                });
+            }
+        })
+    </script>
+    }
+    else
+    {
+        <div class="No_info">
+            <span>没有相关的通知</span>
+        </div>
+    }
+</body>
+</html>

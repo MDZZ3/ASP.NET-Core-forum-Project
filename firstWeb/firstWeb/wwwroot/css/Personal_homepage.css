@@ -1,0 +1,90 @@
+﻿.homepage{
+    margin:20px auto;
+    width:960px;
+}
+.personal_cart{
+    height:165px;
+    border:1px solid #e6e6e6;
+    padding:20px;
+}
+.personal_head{
+    float:left;
+}
+.personal_Nickname {
+    margin-left: 144px;
+}
+.personal_Nickname{
+    font-size:20px;
+}
+.personal_count{
+    margin-right:20px;
+}
+.personal_count ul {
+    list-style: none;
+    padding-left: 0;
+    float: left;
+    height: 100%;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.personal_count li {  
+    font-size: 15px;
+    color: #9da4aa;
+    padding-left:25px;
+    margin:0 23px;
+    border-left:1px solid #e6e6e6;
+}
+.personal_info_menu {
+    float: left;
+    border: 1px solid #e6e6e6;
+    width: 153px;
+
+}
+.personal_info_menu li a{
+    text-indent:-2px;
+}
+.info {
+    padding: 10px;
+}
+.info h4{
+    padding-bottom:10px;
+    border-bottom:1px solid #e6e6e6;
+}
+.personal_info {
+    margin-top: 50px;
+}
+
+.personal_info_container {
+    height: 400px;
+    margin-left: 170px;
+    border: 1px solid #e6e6e6;
+    padding:10px;
+}
+.personal_info_container h4{
+    font-size:16px;
+    padding-bottom:10px;
+    border-bottom:1px solid #e6e6e6;
+}
+.personal_info_container ul li{
+    padding-left:10px;
+    padding-bottom:6px;
+    border-left:2px solid #e6e6e6;
+}
+.personal_info_container ul{
+    list-style:none;
+   padding-left:0;
+}
+.name{
+    font-size:13px;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+    color: #000000;
+    background-color: #e6e6e6;
+    border-left: 1px solid #5a5a59;
+}
+.nav-pills > li > a{
+    border-radius:0px;
+}
+#personal_tid, #personal_Nickname {
+    margin-bottom: 15px;
+}

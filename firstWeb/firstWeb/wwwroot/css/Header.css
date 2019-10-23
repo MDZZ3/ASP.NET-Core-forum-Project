@@ -1,0 +1,88 @@
+#Header{
+    height: 50px;
+    background:#5b5a5a ;
+}
+#Header_Content{
+    margin:0 auto;
+    height: 50px;
+    width:990px;
+}
+#UserLogin_Register{
+    float: right;
+    position: relative;
+    top: -35px;
+    right:20px;
+}
+#UserLogin_Register>a{
+    color:#fff;
+}
+#UserLogin_Register>a:hover{
+    color:aqua;
+}
+a{
+    text-decoration: none;
+    outline: 0;   
+}
+#userinfo, #userinfo:visited,.user_info > a, .user_info > a:visited {
+    color: #fff;
+    text-decoration: none
+}
+
+#userinfo:hover,.user_info>a:hover {
+    color: aqua;
+}
+
+#LoginBtn:link, #LoginBtn:visited, .RegisterBtn:link, .RegisterBtn:visited, {
+    color: #fff;
+}
+
+#UserLogin_Register a{
+    display: inline;
+}
+.logo{
+    display: inline-block;
+    float: left;
+    background:url(../picture/logo_cn.png);
+    width:150px;
+    height: 50px;
+}
+.logo a{
+    display: block;
+}
+.info_Count {
+    position: absolute;
+    display:none; 
+    width:7px;
+    height:7px;
+    border-radius:4px;
+    background-color:#ff6a00;
+}
+.info_Count>.badge{
+    padding-left:4px;
+}
+.user_info{
+    margin-right:10px;
+    position:relative;
+}
+.footer {
+    height: 100px;
+    width: 100%;
+    background-color: #3f3f3f;
+    /*position: absolute;
+    bottom: -179px;*/
+}
+.dropdown-menu li{
+    width:10px;
+   
+}
+.dropdown-menu {
+    left: -5px;
+    top: 22px;
+    min-width: 113px;
+}
+#page {
+    margin: 50px 0;
+}
+#page>ul{
+   margin:0px 164px;
+}

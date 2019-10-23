@@ -1,0 +1,12 @@
+C:\Users\MDZZ\source\repos\forum_Demo\forum_SSO_Server\forum.Core\obj\Debug\netcoreapp2.0\forum.Core.csprojResolveAssemblyReference.cache
+C:\Users\MDZZ\source\repos\forum_Demo\forum_SSO_Server\forum.Core\obj\Debug\netcoreapp2.0\forum.Core.csproj.CoreCompileInputs.cache
+C:\Users\MDZZ\source\repos\forum_Demo\forum_SSO_Server\forum.Core\obj\Debug\netcoreapp2.0\forum.Core.AssemblyInfoInputs.cache
+C:\Users\MDZZ\source\repos\forum_Demo\forum_SSO_Server\forum.Core\obj\Debug\netcoreapp2.0\forum.Core.AssemblyInfo.cs
+C:\Users\MDZZ\source\repos\forum_Demo\forum_SSO_Server\forum.Core\bin\Debug\netcoreapp2.0\forum.Core.deps.json
+C:\Users\MDZZ\source\repos\forum_Demo\forum_SSO_Server\forum.Core\bin\Debug\netcoreapp2.0\forum.Core.dll
+C:\Users\MDZZ\source\repos\forum_Demo\forum_SSO_Server\forum.Core\bin\Debug\netcoreapp2.0\forum.Core.pdb
+C:\Users\MDZZ\source\repos\forum_Demo\forum_SSO_Server\forum.Core\bin\Debug\netcoreapp2.0\forum.DAL.dll
+C:\Users\MDZZ\source\repos\forum_Demo\forum_SSO_Server\forum.Core\bin\Debug\netcoreapp2.0\forum.DAL.pdb
+C:\Users\MDZZ\source\repos\forum_Demo\forum_SSO_Server\forum.Core\obj\Debug\netcoreapp2.0\forum.Core.csproj.CopyComplete
+C:\Users\MDZZ\source\repos\forum_Demo\forum_SSO_Server\forum.Core\obj\Debug\netcoreapp2.0\forum.Core.dll
+C:\Users\MDZZ\source\repos\forum_Demo\forum_SSO_Server\forum.Core\obj\Debug\netcoreapp2.0\forum.Core.pdb

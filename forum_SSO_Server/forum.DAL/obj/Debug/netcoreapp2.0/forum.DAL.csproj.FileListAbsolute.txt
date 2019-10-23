@@ -1,0 +1,9 @@
+C:\Users\MDZZ\source\repos\forum_Demo\forum_SSO_Server\forum.DAL\bin\Debug\netcoreapp2.0\forum.DAL.deps.json
+C:\Users\MDZZ\source\repos\forum_Demo\forum_SSO_Server\forum.DAL\bin\Debug\netcoreapp2.0\forum.DAL.dll
+C:\Users\MDZZ\source\repos\forum_Demo\forum_SSO_Server\forum.DAL\obj\Debug\netcoreapp2.0\forum.DAL.csproj.CoreCompileInputs.cache
+C:\Users\MDZZ\source\repos\forum_Demo\forum_SSO_Server\forum.DAL\obj\Debug\netcoreapp2.0\forum.DAL.AssemblyInfoInputs.cache
+C:\Users\MDZZ\source\repos\forum_Demo\forum_SSO_Server\forum.DAL\obj\Debug\netcoreapp2.0\forum.DAL.AssemblyInfo.cs
+C:\Users\MDZZ\source\repos\forum_Demo\forum_SSO_Server\forum.DAL\bin\Debug\netcoreapp2.0\forum.DAL.pdb
+C:\Users\MDZZ\source\repos\forum_Demo\forum_SSO_Server\forum.DAL\obj\Debug\netcoreapp2.0\forum.DAL.dll
+C:\Users\MDZZ\source\repos\forum_Demo\forum_SSO_Server\forum.DAL\obj\Debug\netcoreapp2.0\forum.DAL.pdb
+C:\Users\MDZZ\source\repos\forum_Demo\forum_SSO_Server\forum.DAL\obj\Debug\netcoreapp2.0\forum.DAL.csprojResolveAssemblyReference.cache

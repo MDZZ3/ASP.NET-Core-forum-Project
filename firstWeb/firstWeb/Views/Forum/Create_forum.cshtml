@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "Create_forum";
+}
+@*@model firstWeb.Domain.ViewModel.forumViewModel*@
+@model firstWeb.Domain.ViewModel.forumViewModel
+<link href="~/css/Create_forum.css" rel="stylesheet" />
+<script src="~/lib/wangEditor-3.1.1/wangEditor-3.1.1/release/wangEditor.min.js"></script>
+<script src="~/js/Create_forum.js"></script>
+<div class="theme">
+    <div class="theme_Content">
+        <div>
+            <h4 class="">发布新帖</h4>
+            <hr />
+        </div>
+        
+        <form class="form-horizontal">
+            <div id="forum_Title_Div" class="form-group">
+                <label class="col-sm-1">题目</label>
+                <input type="text" id="forum_Title" name="forum_Title" class=" form-control" placeholder="请输入题目" />
+                <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                @*<span class="glyphicon glyphicon-remove form-control-feedback"></span>*@
+                <div id="Verification_Title">
+                    <span ></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1">类型</label>
+                <div id="categoryItem">
+                    <select asp-items="@ViewBag.CategoryItem" class="col-md-2 form-control"></select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div id="editor">
+                    <p>请填写帖子内容</p>
+                </div>
+            </div>
+            <div id="btnItem" class="form-group">
+                <input type="button" onclick="javascript:history.back(-1);" value="返回" class="btn btn-default" />
+                
+                <button id="Create" class="btn btn-info">确定</button>
+            </div>
+        </form>
+    </div>
+    <div id="test">
+
+    </div>
+</div>
+
+

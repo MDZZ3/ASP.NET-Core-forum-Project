@@ -1,0 +1,34 @@
+/*·ÖÒ³CSSÐ§¹û*/
+.paging > div li, #page >ul> li {
+    display: inline-block;
+    min-width: 30px;
+    height: 28px;
+    cursor: pointer;
+    color: #666;
+    font-size: 13px;
+    line-height: 28px;
+    background-color: #f9f9f9;
+    border: 1px solid #dce0e0;
+    text-align: center;
+    margin: 0 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.xl-nextPage, .xl-prevPage {
+    width: 60px;
+    color: #0073A9;
+    height: 28px;
+}
+
+.paging > div li.xl-disabled, #page > ul > li.xl-disabled {
+    opacity: .5;
+    cursor: no-drop;
+}
+
+.paging > div li.xl-active, #page > ul > li.xl-active {
+    background-color: #0073A9;
+    border-color: #0073A9;
+    color: #FFF
+}

@@ -1,0 +1,9 @@
+C:\Users\MDZZ\source\repos\forum_Demo\firstWeb\firstWeb.Domain.Repositories\bin\Debug\netcoreapp2.0\firstWeb.Domain.Repositories.deps.json
+C:\Users\MDZZ\source\repos\forum_Demo\firstWeb\firstWeb.Domain.Repositories\bin\Debug\netcoreapp2.0\firstWeb.Domain.Repositories.dll
+C:\Users\MDZZ\source\repos\forum_Demo\firstWeb\firstWeb.Domain.Repositories\obj\Debug\netcoreapp2.0\firstWeb.Domain.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\MDZZ\source\repos\forum_Demo\firstWeb\firstWeb.Domain.Repositories\obj\Debug\netcoreapp2.0\firstWeb.Domain.Repositories.AssemblyInfoInputs.cache
+C:\Users\MDZZ\source\repos\forum_Demo\firstWeb\firstWeb.Domain.Repositories\obj\Debug\netcoreapp2.0\firstWeb.Domain.Repositories.AssemblyInfo.cs
+C:\Users\MDZZ\source\repos\forum_Demo\firstWeb\firstWeb.Domain.Repositories\bin\Debug\netcoreapp2.0\firstWeb.Domain.Repositories.pdb
+C:\Users\MDZZ\source\repos\forum_Demo\firstWeb\firstWeb.Domain.Repositories\obj\Debug\netcoreapp2.0\firstWeb.Domain.Repositories.csprojResolveAssemblyReference.cache
+C:\Users\MDZZ\source\repos\forum_Demo\firstWeb\firstWeb.Domain.Repositories\obj\Debug\netcoreapp2.0\firstWeb.Domain.Repositories.dll
+C:\Users\MDZZ\source\repos\forum_Demo\firstWeb\firstWeb.Domain.Repositories\obj\Debug\netcoreapp2.0\firstWeb.Domain.Repositories.pdb

@@ -1,0 +1,90 @@
+﻿@model firstWeb.Domain.ViewModel.forumItemViewModel
+<link href="~/css/theme.css" rel="stylesheet" />
+<link href="~/css/universally.css" rel="stylesheet" />
+<script src="~/js/xlPaging.js"></script>
+    <div class="theme">
+        <div class="theme_Content">
+            <div id="theme_nav">
+                <a href="#" class="theme_nav_list current">推荐</a>
+                <a href="#" class="theme_nav_list">最新主题</a>
+                <a asp-action="Create_forum" asp-controller="Forum" class="theme_nav_btn btn btn-default">发表新主题</a>
+            </div>
+            
+                @if (Model.forumViewModels.Count==0)
+                {
+                    <div style="margin:68px 0;text-align:center">
+                        <span>还没有帖子哦</span>
+                    </div>
+
+                }
+                else
+                {
+                     @foreach(var forumViewmodel in Model.forumViewModels)
+                    { 
+                      <div class="theme_con_list ">
+                        <div class="user_img">
+                            <a href="/Account/homepage-@forumViewmodel.forum_author_Id" target="_blank"><img src="~/@forumViewmodel.forum_author_HeaderAddress" class=" Personal_head_img img-rounded"></a>
+                        </div>
+                         <div class="theme_con">
+                        <div class="title">
+                            <a href="/Forum/@forumViewmodel.forum_ID" class="title_name" target="_blank">
+                                @forumViewmodel.forum_Title
+                            </a>
+                        </div>
+                        <div class=" Article_message clearfix">
+                            <a href="#" class="user_name">@forumViewmodel.forum_author_Name</a>
+                            <span class="time_Text">@forumViewmodel.forum_CreateTime</span>
+                        
+                            <span class="numb_view">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                @forumViewmodel.Reading_volume
+                            </span>
+                        </div>
+                       </div>
+                      </div>
+                    }
+                    <div id="page"></div>
+                    <script>
+                        window.onload=function(){
+                            $("#page").paging({
+                                nowPage:@Model.CurrentPage,
+                                pageNum: @Model.pageCount,
+                                callback: function (num) {
+                                    window.location.href ="/Home/Index?category=@Model.categoryindex&page=" + num;
+                                }
+
+                            })
+
+                        }
+                    </script>
+
+                }
+               
+            
+        </div>
+         <div class="forum_Category">
+             <div class="forum_Category_Title">
+                 全部版块
+             </div>
+             <div class="list-group">
+                 @*<a href="/home/index?" class="list-group-item active">生活</a>
+                 <a href="#" class="list-group-item">技术</a>
+                 <a href="#" class="list-group-item">资源</a>
+                 <a href="#" class="list-group-item">闲聊</a>*@
+                 @foreach(var category in Model.CategoryList)
+                 {
+                     if (category.Key == Model.categoryindex)
+                     {
+                         <a href="/home/index?category=@category.Key"  class="list-group-item active">@category.Value</a>
+                     }
+                     else
+                     {
+                          <a href="/home/index?category=@category.Key"  class="list-group-item">@category.Value</a>
+
+                     }
+
+                 }
+             </div>
+         </div>
+    </div>
+   
